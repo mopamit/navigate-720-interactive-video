@@ -12,11 +12,12 @@ window.NAVIGATE_CONFIG = {
 };
 
 
-// Seconds in the main film. Tutorial files can be connected using videos[].src above.
+// Six contextual stops, one tutorial per stop. Times are seconds in the film.
 window.NAVIGATE_CONFIG.cues = [
- {id:'path',time:40.8,group:'student',title:'איך מתחילים במסלול האישי?',videos:['student-start']},
- {id:'feedback',time:49.1,group:'student',title:'כך רואים התקדמות ומקבלים משוב',videos:['student-progress']},
- {id:'help',time:63.5,group:'student',title:'צריכים עזרה? מכירים את סוכן ה־AI',videos:['student-help']},
- {id:'teacher',time:85.5,group:'teacher',title:'ומה רואים מהצד של המורה?',videos:['teacher-content','teacher-progress','teacher-personal']}
+ {id:'personal',time:16.8,group:'teacher',title:'איך מתאימים את הלמידה לתלמידים שונים?',videos:['teacher-personal']},
+ {id:'content',time:31.6,group:'teacher',title:'איך בוחרים תכנים ויעדי למידה?',videos:['teacher-content']},
+ {id:'path',time:43.6,group:'student',title:'איך מתחילים במסלול האישי?',videos:['student-start']},
+ {id:'help',time:59.5,group:'student',title:'צריכים עזרה? מכירים את סוכן ה־AI',videos:['student-help']},
+ {id:'feedback',time:72.5,group:'student',title:'מתרגלים מיומנויות ורואים התקדמות',videos:['student-progress']},
+ {id:'tracking',time:85.5,group:'teacher',title:'איך עוקבים אחר התקדמות התלמידים?',videos:['teacher-progress']}
 ];
-
