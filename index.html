@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NaviGate | היכרות מתוך הסרטון</title><link rel="stylesheet" href="style.css"><script defer src="config.js"></script><script defer src="app.js"></script></head>
+<body>
+<header><img src="assets/navigate-logo-transparent.png" alt="NaviGate"><div><strong dir="ltr">NaviGate</strong><span>מכירים את המערכת, מתוך הסרטון</span></div><img src="assets/219739.png" alt="Prismind"></header>
+<main id="stage">
+<video id="film" playsinline preload="auto" aria-label="סרטון ההיכרות של NaviGate"></video>
+<button id="start" class="start primary" hidden>מתחילים <span aria-hidden="true">▶</span></button>
+<button id="libraryButton" class="library-button">כל סרטוני ההדרכה <span aria-hidden="true">☷</span></button>
+<div id="hint" class="hint">ברגעים נבחרים נעצור להסבר קצר. אפשר תמיד להמשיך בסרטון.</div>
+<p id="filmError" class="error" role="status" hidden>לא ניתן לטעון את הסרטון. אפשר לפתוח את סרטוני ההדרכה.</p>
+<div id="controls" class="controls" aria-label="פקדי הסרטון">
+<div class="seek-row"><input id="seek" type="range" min="0" max="96" value="0" step="0.1" aria-label="מיקום בסרטון"><div id="markers" class="markers"></div></div>
+<div class="control-row"><button id="play" aria-label="ניגון">▶</button><span id="time" dir="ltr">0:00 / 1:36</span><button id="mute" aria-label="השתקה">קול</button><input id="volume" type="range" min="0" max="1" step=".05" value="1" aria-label="עוצמת קול"><label class="auto"><input id="auto" type="checkbox" checked> עצירות להסבר</label><button id="fullscreen" aria-label="מסך מלא">⛶</button></div>
+</div>
+<section id="overlay" class="overlay" role="dialog" aria-modal="true" aria-labelledby="overlayTitle" hidden>
+<div class="panel"><div class="panel-top"><span id="perspective" class="eyebrow"></span><span id="moment" dir="ltr"></span></div><h1 id="overlayTitle" tabindex="-1"></h1><p id="overlayNote"></p><div id="choices" class="choices"></div><button id="continue" class="continue">ממשיכים בסרטון <span aria-hidden="true">←</span></button></div>
+</section>
+<section id="lesson" class="lesson" role="dialog" aria-modal="true" aria-labelledby="lessonTitle" hidden><div class="lesson-panel"><div class="lesson-header"><h2 id="lessonTitle" tabindex="-1"></h2><button id="back" class="secondary">חזרה לנושאים</button></div><video id="lessonVideo" controls playsinline hidden></video><div id="coming" class="coming"><span aria-hidden="true">▷</span><p>סרטון ההדרכה יתווסף בקרוב</p></div><p id="lessonError" class="error" role="status" hidden>לא ניתן לטעון את סרטון ההדרכה.</p><button id="resumeLesson" class="primary">חזרה לסרטון מאותה נקודה ←</button></div></section>
+</main>
+</body></html>
